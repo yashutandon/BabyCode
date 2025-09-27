@@ -1,73 +1,112 @@
-# React + TypeScript + Vite
+# IELTS Excellence
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern, responsive website for an IELTS preparation institute built with React and TypeScript.
 
-Currently, two official plugins are available:
+## Overview
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+IELTS Excellence is a comprehensive web platform designed for IELTS test preparation institutes. The website features a clean, professional design that showcases IELTS preparation services, course offerings, and student success stories.
 
-## React Compiler
+## Features
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Responsive Design**: Optimized for desktop, tablet, and mobile devices
+- **Modern UI**: Clean, professional interface with smooth animations
+- **Course Showcase**: Highlighting key IELTS preparation features:
+  - Speaking Practice with AI feedback
+  - Comprehensive Mock Tests
+  - AI-powered Band Score prediction
+  - Personalized Learning paths
+- **Student Testimonials**: Social proof from successful students
+- **SEO Optimized**: Meta tags and structured content for search engines
 
-## Expanding the ESLint configuration
+## Technologies Used
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **Frontend**: React 18, TypeScript
+- **Build Tool**: Vite
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui
+- **Routing**: React Router DOM
+- **Icons**: Lucide React
+- **Animations**: Tailwind CSS animations
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Getting Started
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+### Prerequisites
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- Node.js (v18 or higher)
+- npm or yarn
+
+### Installation
+
+1. Clone the repository:
+```bash
+git clone <repository-url>
+cd ielts-excellence
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+2. Install dependencies:
+```bash
+npm install
 ```
+
+3. Start the development server:
+```bash
+npm run dev
+```
+
+4. Open your browser and navigate to `http://localhost:8080`
+
+### Build for Production
+
+```bash
+npm run build
+```
+
+The built files will be in the `dist` directory.
+
+## Project Structure
+
+```
+src/
+├── components/          # Reusable UI components
+│   ├── ui/             # shadcn/ui components
+│   ├── Navbar.tsx      # Navigation component
+│   ├── Hero.tsx        # Hero section
+│   ├── Features.tsx    # Features showcase
+│   ├── Testimonials.tsx # Student testimonials
+│   └── Footer.tsx      # Footer component
+├── pages/              # Page components
+├── router/             # Routing configuration
+├── assets/             # Static assets
+├── hooks/              # Custom React hooks
+├── lib/                # Utility functions
+└── index.css           # Global styles and design tokens
+```
+
+## Customization
+
+### Design System
+
+The project uses a custom design system defined in:
+- `src/index.css` - CSS custom properties and design tokens
+- `tailwind.config.ts` - Tailwind configuration and theme extensions
+
+### Colors
+
+Primary color palette uses blue/teal tones for a professional, trustworthy appearance:
+- Primary: HSL-based color system
+- Semantic color tokens for consistency
+- Dark mode support
+
+## Performance
+
+- Optimized images with proper alt tags
+- Lazy loading for better performance
+- Minimal bundle size with tree shaking
+- Responsive images for different screen sizes
+
+## Browser Support
+
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
