@@ -1,0 +1,498 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+:root {
+  --background: oklch(0.9232 0.0026 48.7171);
+  --foreground: oklch(0.2795 0.0368 260.0310);
+  --card: oklch(0.9699 0.0013 106.4238);
+  --card-foreground: oklch(0.2795 0.0368 260.0310);
+  --popover: oklch(0.9699 0.0013 106.4238);
+  --popover-foreground: oklch(0.2795 0.0368 260.0310);
+  --primary: oklch(0.5854 0.2041 277.1173);
+  --primary-foreground: oklch(1.0000 0 0);
+  --secondary: oklch(0.8687 0.0043 56.3660);
+  --secondary-foreground: oklch(0.4461 0.0263 256.8018);
+  --muted: oklch(0.9232 0.0026 48.7171);
+  --muted-foreground: oklch(0.5510 0.0234 264.3637);
+  --accent: oklch(0.9376 0.0260 321.9388);
+  --accent-foreground: oklch(0.3729 0.0306 259.7328);
+  --destructive: oklch(0.6368 0.2078 25.3313);
+  --destructive-foreground: oklch(1.0000 0 0);
+  --border: oklch(0.8687 0.0043 56.3660);
+  --input: oklch(0.8687 0.0043 56.3660);
+  --ring: oklch(0.5854 0.2041 277.1173);
+  --chart-1: oklch(0.5854 0.2041 277.1173);
+  --chart-2: oklch(0.5106 0.2301 276.9656);
+  --chart-3: oklch(0.4568 0.2146 277.0229);
+  --chart-4: oklch(0.3984 0.1773 277.3662);
+  --chart-5: oklch(0.3588 0.1354 278.6973);
+  --sidebar: oklch(0.8687 0.0043 56.3660);
+  --sidebar-foreground: oklch(0.2795 0.0368 260.0310);
+  --sidebar-primary: oklch(0.5854 0.2041 277.1173);
+  --sidebar-primary-foreground: oklch(1.0000 0 0);
+  --sidebar-accent: oklch(0.9376 0.0260 321.9388);
+  --sidebar-accent-foreground: oklch(0.3729 0.0306 259.7328);
+  --sidebar-border: oklch(0.8687 0.0043 56.3660);
+  --sidebar-ring: oklch(0.5854 0.2041 277.1173);
+  --font-sans: Plus Jakarta Sans, sans-serif;
+  --font-serif: Lora, serif;
+  --font-mono: Roboto Mono, monospace;
+  --radius: 1.25rem;
+  --shadow-2xs: 2px 2px 10px 4px hsl(240 4% 60% / 0.09);
+  --shadow-xs: 2px 2px 10px 4px hsl(240 4% 60% / 0.09);
+  --shadow-sm: 2px 2px 10px 4px hsl(240 4% 60% / 0.18), 2px 1px 2px 3px hsl(240 4% 60% / 0.18);
+  --shadow: 2px 2px 10px 4px hsl(240 4% 60% / 0.18), 2px 1px 2px 3px hsl(240 4% 60% / 0.18);
+  --shadow-md: 2px 2px 10px 4px hsl(240 4% 60% / 0.18), 2px 2px 4px 3px hsl(240 4% 60% / 0.18);
+  --shadow-lg: 2px 2px 10px 4px hsl(240 4% 60% / 0.18), 2px 4px 6px 3px hsl(240 4% 60% / 0.18);
+  --shadow-xl: 2px 2px 10px 4px hsl(240 4% 60% / 0.18), 2px 8px 10px 3px hsl(240 4% 60% / 0.18);
+  --shadow-2xl: 2px 2px 10px 4px hsl(240 4% 60% / 0.45);
+  --tracking-normal: 0em;
+  --spacing: 0.25rem;
+}
+
+.dark {
+  --background: oklch(0.2244 0.0074 67.4370);
+  --foreground: oklch(0.9288 0.0126 255.5078);
+  --card: oklch(0.2801 0.0080 59.3379);
+  --card-foreground: oklch(0.9288 0.0126 255.5078);
+  --popover: oklch(0.2801 0.0080 59.3379);
+  --popover-foreground: oklch(0.9288 0.0126 255.5078);
+  --primary: oklch(0.6801 0.1583 276.9349);
+  --primary-foreground: oklch(0.2244 0.0074 67.4370);
+  --secondary: oklch(0.3359 0.0077 59.4197);
+  --secondary-foreground: oklch(0.8717 0.0093 258.3382);
+  --muted: oklch(0.2801 0.0080 59.3379);
+  --muted-foreground: oklch(0.7137 0.0192 261.3246);
+  --accent: oklch(0.3896 0.0074 59.4734);
+  --accent-foreground: oklch(0.8717 0.0093 258.3382);
+  --destructive: oklch(0.6368 0.2078 25.3313);
+  --destructive-foreground: oklch(0.2244 0.0074 67.4370);
+  --border: oklch(0.3359 0.0077 59.4197);
+  --input: oklch(0.3359 0.0077 59.4197);
+  --ring: oklch(0.6801 0.1583 276.9349);
+  --chart-1: oklch(0.6801 0.1583 276.9349);
+  --chart-2: oklch(0.5854 0.2041 277.1173);
+  --chart-3: oklch(0.5106 0.2301 276.9656);
+  --chart-4: oklch(0.4568 0.2146 277.0229);
+  --chart-5: oklch(0.3984 0.1773 277.3662);
+  --sidebar: oklch(0.3359 0.0077 59.4197);
+  --sidebar-foreground: oklch(0.9288 0.0126 255.5078);
+  --sidebar-primary: oklch(0.6801 0.1583 276.9349);
+  --sidebar-primary-foreground: oklch(0.2244 0.0074 67.4370);
+  --sidebar-accent: oklch(0.3896 0.0074 59.4734);
+  --sidebar-accent-foreground: oklch(0.8717 0.0093 258.3382);
+  --sidebar-border: oklch(0.3359 0.0077 59.4197);
+  --sidebar-ring: oklch(0.6801 0.1583 276.9349);
+  --font-sans: Plus Jakarta Sans, sans-serif;
+  --font-serif: Lora, serif;
+  --font-mono: Roboto Mono, monospace;
+  --radius: 1.25rem;
+  --shadow-2xs: 2px 2px 10px 4px hsl(0 0% 0% / 0.09);
+  --shadow-xs: 2px 2px 10px 4px hsl(0 0% 0% / 0.09);
+  --shadow-sm: 2px 2px 10px 4px hsl(0 0% 0% / 0.18), 2px 1px 2px 3px hsl(0 0% 0% / 0.18);
+  --shadow: 2px 2px 10px 4px hsl(0 0% 0% / 0.18), 2px 1px 2px 3px hsl(0 0% 0% / 0.18);
+  --shadow-md: 2px 2px 10px 4px hsl(0 0% 0% / 0.18), 2px 2px 4px 3px hsl(0 0% 0% / 0.18);
+  --shadow-lg: 2px 2px 10px 4px hsl(0 0% 0% / 0.18), 2px 4px 6px 3px hsl(0 0% 0% / 0.18);
+  --shadow-xl: 2px 2px 10px 4px hsl(0 0% 0% / 0.18), 2px 8px 10px 3px hsl(0 0% 0% / 0.18);
+  --shadow-2xl: 2px 2px 10px 4px hsl(0 0% 0% / 0.45);
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+  --font-serif: var(--font-serif);
+
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+
+  --shadow-2xs: var(--shadow-2xs);
+  --shadow-xs: var(--shadow-xs);
+  --shadow-sm: var(--shadow-sm);
+  --shadow: var(--shadow);
+  --shadow-md: var(--shadow-md);
+  --shadow-lg: var(--shadow-lg);
+  --shadow-xl: var(--shadow-xl);
+  --shadow-2xl: var(--shadow-2xl);
+}
+
+/* Transition delay using CSS variable */
+.transition-delay {
+  transition-delay: var(--delay);
+}
+
+/* Floating card animation */
+.floating-card {
+  transform: translateY(8px) scale(0.9);
+  opacity: 0;
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.floating-card.show {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* Example transition delays (optional, if you want fixed classes) */
+.transition-delay-0 { transition-delay: 0ms; }
+.transition-delay-200 { transition-delay: 200ms; }
+.transition-delay-400 { transition-delay: 400ms; }
+.transition-delay-600 { transition-delay: 600ms; }
+.transition-delay-800 { transition-delay: 800ms; }
+.transition-delay-1000 { transition-delay: 1000ms; }
+.transition-delay-1200 { transition-delay: 1200ms; }
+.transition-delay-1400 { transition-delay: 1400ms; }
+
+/* Staggered animation for cards */
+.card-animate {
+  transform: translateY(3rem) scale(0.95);
+  opacity: 0;
+  transition: transform 0.7s ease, opacity 0.7s ease;
+}
+
+.card-animate.show {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* Stagger delays */
+.card-delay-0 { transition-delay: 0ms; }
+.card-delay-1 { transition-delay: 150ms; }
+.card-delay-2 { transition-delay: 300ms; }
+.card-delay-3 { transition-delay: 450ms; }
+
+/* Title & subtitle animations */
+.title-animate {
+  transform: translateY(2rem);
+  opacity: 0;
+  transition: transform 0.7s ease, opacity 0.7s ease;
+}
+
+.title-animate.show { 
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.subtitle-animate {
+  transform: translateY(1.5rem);
+  opacity: 0;
+  transition: transform 0.7s ease, opacity 0.7s ease;
+}
+
+.subtitle-animate.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Background decorative circles */
+.bg-circle-pulse {
+  border-radius: 9999px;
+  filter: blur(80px);
+  animation: pulse 4s infinite alternate;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.3; transform: scale(1); }
+  100% { opacity: 0.5; transform: scale(1.1); }
+}
+/* Footer section animation */
+.footer-section-animate {
+  transform: translateY(2rem);
+  opacity: 0;
+  transition: transform 0.7s ease, opacity 0.7s ease;
+}
+
+.footer-section-animate.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Stagger delays for 4 sections */
+.footer-delay-0 { transition-delay: 0ms; }
+.footer-delay-1 { transition-delay: 200ms; }
+.footer-delay-2 { transition-delay: 400ms; }
+.footer-delay-3 { transition-delay: 600ms; }
+
+/* Animated links underline on hover */
+.footer-link {
+  position: relative;
+  display: inline-block;
+  transition: color 0.3s;
+}
+
+.footer-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: var(--color-primary);
+  transition: width 0.3s;
+}
+
+.footer-link:hover::after {
+  width: 100%;
+}
+
+/* Social icon hover animation */
+.footer-social {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.5rem;
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.footer-social:hover {
+  transform: scale(1.1) translateY(-0.25rem);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+/* Background circles */
+.footer-bg-circle {
+  border-radius: 9999px;
+  filter: blur(80px);
+  animation: pulse 4s infinite alternate;
+}
+
+@keyframes pulse {
+  0% { opacity: 0.3; transform: scale(1); }
+  100% { opacity: 0.5; transform: scale(1.1); }
+}
+
+
+/* Testimonials section animation */
+.testimonial-section-animate {
+  transform: translateY(3rem) scale(0.95);
+  opacity: 0;
+  transition: transform 0.7s ease, opacity 0.7s ease;
+}
+
+.testimonial-section-animate.show {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* Staggered delays for testimonial cards */
+.testimonial-delay-0 { transition-delay: 0ms; }
+.testimonial-delay-1 { transition-delay: 250ms; }
+.testimonial-delay-2 { transition-delay: 500ms; }
+
+/* Animated bottom dots */
+.testimonial-dot {
+  width: 12px;
+  height: 4px;
+  border-radius: 9999px;
+  background-color: var(--color-primary);
+  transform: scale(0);
+  opacity: 0;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+.testimonial-dot.show {
+  transform: scale(1);
+  opacity: 1;
+}
+
+/* Card hover glow effect */
+.testimonial-card-hover:hover {
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+  transform: translateY(-0.5rem) scale(1.02);
+}
+
+/* Quote icon hover effect */
+.testimonial-quote-hover:hover {
+  transform: scale(1.1) rotate(10deg);
+  color: var(--color-primary);
+}
+
+/* Star hover */
+.testimonial-star-hover:hover {
+  transform: scale(1.2);
+  color: #facc15; /* yellow-400 */
+  transition: transform 0.3s, color 0.3s;
+}
+/* Floating card animation */
+.floating-card {
+  transform: translateY(20px);
+  opacity: 0;
+  transition: all 0.7s ease-in-out;
+  transition-delay: 1s; /* equivalent of previous --delay */
+}
+
+.floating-card.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+/* Optional: Tailwind delay utilities if not already present */
+.delay-0 { transition-delay: 0ms; }
+.delay-100 { transition-delay: 100ms; }
+.delay-200 { transition-delay: 200ms; }
+.delay-300 { transition-delay: 300ms; }
+.delay-400 { transition-delay: 400ms; }
+.delay-500 { transition-delay: 500ms; }
+.delay-600 { transition-delay: 600ms; }
+.delay-700 { transition-delay: 700ms; }
+.delay-800 { transition-delay: 800ms; }
+.delay-900 { transition-delay: 900ms; }
+.delay-1000 { transition-delay: 1000ms; }
+/* Header animations */
+.title-animate {
+  opacity: 0;
+  transform: translateY(-10px);
+  transition: all 0.7s ease-in-out;
+}
+.title-animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.subtitle-animate {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: all 0.7s ease-in-out 0.2s;
+}
+.subtitle-animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Card animations */
+.card-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.7s ease-in-out;
+}
+.card-animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: delays for staggered cards */
+.card-delay-0 { transition-delay: 0ms; }
+.card-delay-1 { transition-delay: 150ms; }
+.card-delay-2 { transition-delay: 300ms; }
+.card-delay-3 { transition-delay: 450ms; }
+/* Title and subtitle animation */
+.testimonial-title-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.7s ease-in-out;
+}
+.testimonial-title-animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.testimonial-subtitle-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.7s ease-in-out 0.2s;
+}
+.testimonial-subtitle-animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Testimonial card animation */
+.testimonial-section-animate {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.7s ease-in-out;
+}
+.testimonial-section-animate.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Optional: stagger delays for cards */
+.testimonial-delay-0 { transition-delay: 0ms; }
+.testimonial-delay-1 { transition-delay: 250ms; }
+.testimonial-delay-2 { transition-delay: 500ms; }
+
+/* Testimonial dots */
+.testimonial-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: rgba(79, 70, 229, 0.3); /* primary/30 */
+  transform: scale(0);
+  opacity: 0;
+  transition: all 0.5s ease-in-out;
+}
+.testimonial-dot.show {
+  transform: scale(1);
+  opacity: 1;
+}
+.testimonial-dot.testimonial-delay-0 { transition-delay: 0ms; }
+.testimonial-dot.testimonial-delay-1 { transition-delay: 250ms; }
+.testimonial-dot.testimonial-delay-2 { transition-delay: 500ms; }
