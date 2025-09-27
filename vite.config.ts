@@ -9,9 +9,13 @@ const __dirname = path.dirname(__filename);
 
 export default defineConfig({
   plugins: [react()],
+
   resolve: {
     alias: [
       { find: '@', replacement: path.resolve(__dirname, 'src') }
     ],
   },
+
+  // ✅ Add this line for correct asset paths on Vercel
+  base: '/',
 });
